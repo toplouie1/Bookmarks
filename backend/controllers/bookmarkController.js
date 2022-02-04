@@ -10,6 +10,9 @@ const {
 
 const { checkName } = require("../validations/checkBookmarks.js");
 
+const reviewsController = require("./reviewsController.js");
+bookmarks.use("/:bookmarkId/reviews", reviewsController);
+
 // for all the bookMarks ..
 bookmarks.get("/", async (req, res) => {
 	try {
